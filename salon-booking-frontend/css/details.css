@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+:root {
+    --primary: #5B2C4D;
+    --accent: #C9A227;
+    --background: #FAF8F5;
+    --white: #FFFFFF;
+    --text: #222222;
+    --text-secondary: #6B6B6B;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background-color: var(--background);
+    padding: 1.8rem 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+}
+
+.logo {
+    margin-left: 0;
+    font-size: 3.5rem;
+    color: var(--primary);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo-span {
+    color: var(--text);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* NAVIGATION */
+
+.navbar > nav {
+    margin-left: auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-left: 3rem;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+a:hover,
+a:active {
+    color: var(--primary);
+}
+
+/* MAIN */
+
+.main {
+    padding: 5rem;
+    color: black;
+    margin: 10rem;
+    font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-table{
+    margin-top: 5rem;
+}
+.main-table th {
+    padding: 2rem;
+    font-weight: 700;
+}
+
+/* th content */
+
+.Heading{
+    font-weight: 5rem;
+}
+
+.book{
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #5B2C4D;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* IMAGE SLIDER */
+
+.img-container {
+    height: 500px;
+    width: 800px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 2rem;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slides img {  
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+/* BUTTONS */
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    margin: 0;
+    padding: 10px 15px;
+
+    font-size: 3rem;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* salon name */
+.salon-heading h1{
+    display: flex;
+    font-size: 6rem;
+    padding: 5rem;
+    color: #5B2C4D;
+    border: #5B2C4D;
+}
+
+.salon-heading p{
+    font-size: 3rem;
+    /* font-size: 6rem; */
+    padding: 5rem;
+    /* color: #5B2C4D; */
+    /* border: #5B2C4D;  */
+}
+
+
+/* OUR SERVICES  */
+.services-section {
+    width: 100%;
+}
+
+.section-heading {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small-heading {
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    margin-bottom: 0.8rem;
+}
+
+.section-heading h2 {
+    font-size: 5rem;
+    margin-bottom: 0.8rem;
+}
+
+.section-heading p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 1.2rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;  
+}
+
+.service-card:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.service-card p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.service-card span {
+    font-size: 1.3rem;
+    color: #888;
+}
+
+.service-price {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.service-price strong {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.service-price a {
+    padding: 0.9rem 1.8rem;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.service-price a:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+
+    .section-heading h2 {
+        font-size: 2.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .service-card p {
+        font-size: 1.3rem;
+    }
+
+    .service-price {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .service-price strong {
+        font-size: 1.6rem;
+    }
+
+    .service-price a {
+        padding: 0.7rem 1.4rem;
+    }
+}

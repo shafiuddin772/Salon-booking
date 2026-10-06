@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #f8f5f7;
+    color: #222;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    padding: 2rem 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.logo-span {
+    color: #5b2c4d;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.navbar nav a {
+    font-size: 1.6rem;
+    color: #333;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #5b2c4d;
+}
+
+.signup-btn {
+    padding: 1rem 2rem;
+    background: #5b2c4d;
+    color: #fff !important;
+    border-radius: 0.8rem;
+}
+
+
+/* BOOKING PAGE */
+
+.booking-page {
+    width: 90%;
+    max-width: 1100px;
+    margin: 6rem auto;
+}
+
+.booking-heading {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.small-heading {
+    color: #5b2c4d;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    margin-bottom: 1rem;
+}
+
+.booking-heading h1 {
+    font-size: 3.8rem;
+    margin-bottom: 1rem;
+}
+
+.booking-heading > p:last-child {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+
+/* BOOKING CONTAINER */
+
+.booking-container {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+
+/* SALON SUMMARY */
+
+.salon-summary {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eee;
+}
+
+.salon-summary img {
+    width: 13rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.salon-summary-info h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.salon-summary-info p {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.rating {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #fff4d6;
+    color: #9a6a00;
+    border-radius: 0.6rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+
+/* FORM */
+
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1.3rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    outline: none;
+    font-size: 1.5rem;
+    background: #fff;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #5b2c4d;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* FULL WIDTH FIELDS */
+
+.form-group:nth-child(6) {
+    grid-column: 1 / -1;
+}
+
+
+/* BOOKING SUMMARY */
+
+.booking-summary {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+    padding: 2rem;
+    background: #f8f5f7;
+    border-radius: 1rem;
+}
+
+.booking-summary h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1.5rem;
+}
+
+.summary-row span {
+    color: #777;
+}
+
+.summary-row strong {
+    color: #333;
+}
+
+.summary-row.total {
+    border-bottom: none;
+    margin-top: 0.5rem;
+    padding-top: 1.5rem;
+}
+
+.summary-row.total strong {
+    color: #5b2c4d;
+    font-size: 2rem;
+}
+
+
+/* CONFIRM BUTTON */
+
+.booking-btn {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 1.5rem;
+    background: #5b2c4d;
+    color: #fff;
+    border-radius: 0.8rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-btn:hover {
+    background: #47223c;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 6rem;
+    padding: 4rem 7% 2rem;
+    background: #2d1a27;
+    color: #fff;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+}
+
+.footer-content .logo {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.footer-content p {
+    font-size: 1.4rem;
+    color: #ccc;
+    margin-bottom: 0.8rem;
+}
+
+.footer-content h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-content a {
+    display: block;
+    color: #ccc;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.footer-content a:hover {
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #493442;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    color: #aaa;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 2rem 4%;
+    }
+
+    .navbar nav {
+        gap: 1.5rem;
+    }
+
+    .booking-page {
+        width: 92%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .navbar {
+        padding: 1.5rem 5%;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+
+    .booking-page {
+        width: 92%;
+        margin: 4rem auto;
+    }
+
+    .booking-heading h1 {
+        font-size: 3rem;
+    }
+
+    .booking-container {
+        padding: 2rem;
+    }
+
+    .salon-summary {
+        align-items: flex-start;
+    }
+
+    .salon-summary img {
+        width: 10rem;
+        height: 8rem;
+    }
+
+    .salon-summary-info h2 {
+        font-size: 2rem;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group:nth-child(6) {
+        grid-column: auto;
+    }
+
+    .booking-summary {
+        grid-column: auto;
+    }
+
+    .booking-btn {
+        grid-column: auto;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+

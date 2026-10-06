@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+:root {
+    --primary: #5B2C4D;
+    --accent: #C9A227;
+    --background: #FAF8F5;
+    --white: #FFFFFF;
+    --text: #222222;
+    --text-secondary: #6B6B6B;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background-color: var(--background);
+    padding: 1.8rem 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+}
+
+.logo {
+    margin-left: 0;
+    font-size: 3.5rem;
+    color: var(--primary);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo-span {
+    color: var(--text);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* NAVIGATION */
+
+.navbar > nav {
+    margin-left: auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-left: 3rem;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+a:hover,
+a:active {
+    color: var(--primary);
+}
+
+/* MAIN */
+
+/* HEADING */
+.salons-page{
+    padding: 3rem;
+    background-color:var(--background);
+}
+.salons-heading{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 5rem;
+padding: 3rem;
+font-weight: 700;
+color: #5B2C4D;
+}
+
+.small-header{
+    font-size: 5rem;
+}
+
+.salons-heading h1{
+    display: flex;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+/* SEARCH BOX */
+.search-container{
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.search-box{
+    margin: 5rem;
+    padding: 2rem;
+}
+
+/* SEARCH INPUT */
+.search-box input {
+    width: 100%;
+    height: 5rem;
+    padding: 0 1.5rem;
+
+    font-size: 1.6rem;
+    font-family: inherit;
+
+    border: 0.1rem solid #d8c8d2;
+    border-radius: 1rem;
+
+    background-color: #ffffff;
+    color: #333;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+/* PLACEHOLDER */
+.search-box input::placeholder {
+    color: #999;
+}
+
+/* WHEN USER CLICKS INPUT */
+.search-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.3rem rgba(91, 44, 77, 0.12);
+}
+
+/* LABEL */
+.search-box label {
+    display: block;
+    margin-bottom: 0.8rem;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3d2936;
+}
+
+
+/* DROPDOWN */
+.search-box select {
+    width: 100%;
+    height: 5rem;
+    padding: 0 1.5rem;
+
+    font-size: 1.6rem;
+    font-family: inherit;
+
+    color: #333;
+    background-color: #fff;
+
+    border: 0.1rem solid #d8c8d2;
+    border-radius: 1rem;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* DROPDOWN HOVER */
+.search-box select:hover {
+    border-color: var(--primary);
+}
+
+/* DROPDOWN FOCUS */
+.search-box select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.3rem rgba(91, 44, 77, 0.12);
+}
+
+/* OPTIONS */
+.search-box select option {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #333;
+    background-color: #fff;
+}
+
+.search-btn {
+    width: 20%;
+    height: 5rem;
+    padding: 0 2rem;
+
+    border: none;
+    border-radius: 1rem;
+
+    background-color: var(--primary);
+    color: #fff;
+
+    font-size: 1.6rem;
+    font-family: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+    margin-top: 9.5rem;
+}
+
+/* HOVER */
+.search-btn:hover {
+    background-color: #452139;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 1.2rem rgba(91, 44, 77, 0.25);
+}
+
+/* CLICK */
+.search-btn:active {
+    transform: translateY(0);
+}
+
+
+/* SALON CARDS */
+/* POPULAR SALONS */
+
+.section-heading {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 10rem;
+}
+
+.section-heading span {
+    display: block;
+    font-size: 8rem;
+    font-weight: 500;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+.section-heading h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-left: 0;
+}
+
+.salon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    /* margin: 5rem 8%; */
+}
+
+.salon-card {
+    font-size: 2rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 1rem;
+    background-color: var(--white);
+    border: 1px solid rgba(91, 44, 77, 0.15);
+    box-shadow: 0 8px 25px rgba(34, 34, 34, 0.12);
+    transition: all 0.3s ease;
+}
+
+.salon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(91, 44, 77, 0.20);
+}
+
+
+.salon-image {
+    height: 35rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.salon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .salon-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .salon-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.rating {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.salon-info h3 {
+    font-size: 3rem;
+    padding: 2rem;
+    font-weight: 700;
+}
+
+.location {
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.all-salons{
+     text-align: center;
+     margin: 3rem;
+}
+
+.secondary-btn{
+     font-size: 3rem;
+}
+
+footer{
+    text-align: center;
+    padding: 5rem;
+    background-color: #5B2C4D;
+    color: grey
+}
+.copy{
+    font-size: 1rem;
+} 
+
+

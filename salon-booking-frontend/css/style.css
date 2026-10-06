@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+:root {
+    --primary: #5B2C4D;
+    --accent: #C9A227;
+    --background: #FAF8F5;
+    --white: #FFFFFF;
+    --text: #222222;
+    --text-secondary: #6B6B6B;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background-color: var(--background);
+    padding: 1.8rem 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+}
+
+.logo {
+    margin-left: 0;
+    font-size: 3.5rem;
+    color: var(--primary);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo-span {
+    color: var(--text);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* NAVIGATION */
+
+.navbar > nav {
+    margin-left: auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-left: 3rem;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+a:hover,
+a:active {
+    color: var(--primary);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 8rem 0 0;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    background-color: var(--white);
+}
+
+/* LEFT SIDE */
+
+.hero-content {
+    padding: 6rem 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 5rem;
+}
+
+/* SMALL TEXT */
+
+#p1 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+/* MAIN HEADING */
+
+.hero-content h1 {
+    font-size: clamp(4.5rem, 5vw, 7rem);
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+}
+
+/* ART */
+
+#art {
+    color: var(--primary);
+}
+
+/* DESCRIPTION */
+
+.hero-content p {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 55rem;
+}
+
+button{
+    margin-top: 2rem;
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: #5B2C4D;
+    color: white;     
+}
+
+button:hover{
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+/* ================= HERO IMAGE ================= */
+
+.hero-img {
+    width: 100%;
+    height: calc(100vh - 8rem);
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+    border-radius: 5rem;
+}
+
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 1.5rem 5%;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+
+    a {
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    .hero-content {
+        padding: 5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .hero-img {
+        height: calc(100vh - 7rem);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 1.5rem 5%;
+    }
+
+    .logo {
+        font-size: 2.8rem;
+    }
+
+    .navbar > nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 7rem;
+    }
+
+    .hero-content {
+        padding: 6rem 8%;
+        min-height: 60vh;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.6rem;
+    }
+
+    .hero-img {
+        height: 50rem;
+    }
+}
+
+/* FEATURE SECTION */
+
+.feature h2 {
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 5rem;
+    color: #5B2C4D;
+    margin-bottom: 5rem;
+}
+
+/* Features Responsive */
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    
+}
+
+@media (max-width: 900px) {
+    .feature-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+}
+
+.feature-card {
+    background-color: #5B2C4D;
+    font-size: 2rem;
+    padding: 4rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    color: white;
+    flex: 1;
+    max-width: 40rem;
+}
+
+.feature-card:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+.feature-card h3 {
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.feature-card p {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+/* POPULAR SALONS */
+
+.section-heading {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 10rem;
+}
+
+.section-heading span {
+    display: block;
+    font-size: 8rem;
+    font-weight: 500;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+.section-heading h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-left: 0;
+}
+
+.salon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 5rem 8%;
+}
+
+.salon-card {
+    font-size: 2rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 1rem;
+    background-color: var(--white);
+    border: 1px solid rgba(91, 44, 77, 0.15);
+    box-shadow: 0 8px 25px rgba(34, 34, 34, 0.12);
+    transition: all 0.3s ease;
+}
+
+.salon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(91, 44, 77, 0.20);
+}
+
+
+.salon-image {
+    height: 35rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.salon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .salon-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .salon-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.rating {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.salon-info h3 {
+    font-size: 3rem;
+    padding: 2rem;
+    font-weight: 700;
+}
+
+.location {
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.all-salons{
+     text-align: center;
+     margin: 3rem;
+}
+
+.secondary-btn{
+     font-size: 3rem;
+}
+
+footer{
+    text-align: center;
+    padding: 5rem;
+    background-color: #5B2C4D;
+    color: #FFFFFF;
+}
+.copy{
+    font-size: 1rem;
+} 
+
+.rating {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #fff4d6;
+    color: #9a6a00;
+    border-radius: 0.6rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}

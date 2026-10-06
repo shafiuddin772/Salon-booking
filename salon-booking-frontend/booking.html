@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Book Appointment - Find Salon</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/booking.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-span">
+                Find
+            </span>
+
+            Salon
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="salons.html">
+                Salons
+            </a>
+
+            <a href="#">
+                Services
+            </a>
+
+            <a href="#">
+                About
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a
+                href="signup.html"
+                class="signup-btn"
+            >
+                Sign Up
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= BOOKING PAGE ================= -->
+
+    <main class="booking-page">
+
+
+        <div class="booking-heading">
+
+            <p class="small-heading">
+                BOOK APPOINTMENT
+            </p>
+
+            <h1>
+                Book Your Appointment
+            </h1>
+
+            <p>
+                Choose your service, date and preferred time.
+            </p>
+
+        </div>
+
+
+
+        <div class="booking-container">
+
+
+            <!-- ================= SALON INFORMATION ================= -->
+
+            <div class="salon-summary">
+
+
+                <img
+                    id="salonImage"
+                    src="https://images.pexels.com/photos/7447147/pexels-photo-7447147.jpeg"
+                    alt="Salon"
+                >
+
+
+                <div class="salon-summary-info">
+
+                    <h2 id="salonName">
+                        Loading...
+                    </h2>
+
+
+                    <p id="salonLocation">
+                        Loading location...
+                    </p>
+
+
+                    <span class="rating">
+                        ★ 4.8
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= BOOKING FORM ================= -->
+
+            <form
+                class="booking-form"
+                id="bookingForm"
+            >
+
+
+                <!-- SERVICE -->
+
+                <div class="form-group">
+
+                    <label for="service">
+                        Select Service
+                    </label>
+
+
+                    <select
+                        id="service"
+                        name="service"
+                        required
+                    >
+
+                        <option value="">
+                            Select a service
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- DATE -->
+
+                <div class="form-group">
+
+                    <label for="date">
+                        Select Date
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- TIME -->
+
+                <div class="form-group">
+
+                    <label for="time">
+                        Select Time
+                    </label>
+
+
+                    <select
+                        id="time"
+                        name="time"
+                        required
+                    >
+
+                        <option value="">
+                            Select a time
+                        </option>
+
+                        <option value="09:00">
+                            9:00 AM
+                        </option>
+
+                        <option value="10:00">
+                            10:00 AM
+                        </option>
+
+                        <option value="11:00">
+                            11:00 AM
+                        </option>
+
+                        <option value="12:00">
+                            12:00 PM
+                        </option>
+
+                        <option value="13:00">
+                            1:00 PM
+                        </option>
+
+                        <option value="14:00">
+                            2:00 PM
+                        </option>
+
+                        <option value="15:00">
+                            3:00 PM
+                        </option>
+
+                        <option value="16:00">
+                            4:00 PM
+                        </option>
+
+                        <option value="17:00">
+                            5:00 PM
+                        </option>
+
+                        <option value="18:00">
+                            6:00 PM
+                        </option>
+
+                        <option value="19:00">
+                            7:00 PM
+                        </option>
+
+                        <option value="20:00">
+                            8:00 PM
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- CUSTOMER NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- NOTES -->
+
+                <div class="form-group">
+
+                    <label for="notes">
+                        Additional Notes
+                    </label>
+
+
+                    <textarea
+                        id="notes"
+                        name="notes"
+                        placeholder="Any special request?"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- ================= BOOKING SUMMARY ================= -->
+
+                <div class="booking-summary">
+
+                    <h2>
+                        Booking Summary
+                    </h2>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Salon
+                        </span>
+
+                        <strong id="summarySalon">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Service
+                        </span>
+
+                        <strong id="summaryService">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Date
+                        </span>
+
+                        <strong id="summaryDate">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Time
+                        </span>
+
+                        <strong id="summaryTime">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="totalPrice">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+

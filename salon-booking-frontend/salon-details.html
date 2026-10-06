@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Salon Details</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/details.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================== -->
+<!-- NAVBAR -->
+<!-- ========================================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span class="logo-span">
+            Find
+        </span>
+
+        Salon
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="salons.html">
+            Salons
+        </a>
+
+        <a href="#">
+            Services
+        </a>
+
+        <a href="#">
+            About
+        </a>
+
+        <a href="login.html">
+            Login
+        </a>
+
+        <a href="signup.html">
+            Signup
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ========================================== -->
+<!-- SALON DETAILS -->
+<!-- ========================================== -->
+
+<section class="main">
+
+
+    <!-- IMAGE SLIDER -->
+
+    <div class="img-container">
+
+        <div class="slides">
+
+            <img
+                src="https://images.squarespace-cdn.com/content/v1/6091e6edc456d57a746254a2/1850bf2a-85fe-4011-81ef-5e726d5ed752/Salon+Main+IMG_0067.jpg"
+                alt="Salon"
+            >
+
+            <img
+                src="https://images.squarespace-cdn.com/content/v1/66e59d7b092c7078b3e6ea2b/47e7ab52-4339-4e28-be28-ccd4d5b3dc9c/new+side+2.jpg"
+                alt="Salon"
+            >
+
+            <img
+                src="https://images.pexels.com/photos/7447147/pexels-photo-7447147.jpeg"
+                alt="Salon"
+            >
+
+        </div>
+
+
+        <button
+            class="prev"
+            type="button"
+        >
+            &#10094;
+        </button>
+
+
+        <button
+            class="next"
+            type="button"
+        >
+            &#10095;
+        </button>
+
+    </div>
+
+
+
+    <!-- SALON HEADING -->
+
+    <div class="salon-heading">
+
+        <h1 id="salonName">
+            Loading...
+        </h1>
+
+        <p id="salonLocation">
+            Loading location...
+        </p>
+
+    </div>
+
+
+
+    <!-- SALON INFORMATION -->
+
+    <table class="main-table">
+
+        <tr>
+
+            <th>
+                About Salon :
+            </th>
+
+            <td id="salonDescription">
+                Loading...
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <th>
+                Opening Hours :
+            </th>
+
+            <td>
+                9am to 9pm
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <th>
+                Contact :
+            </th>
+
+            <td id="salonPhone">
+                Loading...
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <th>
+                Available services with prices :
+            </th>
+
+            <td>
+                See services below
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <th>
+                Book Appointment :
+            </th>
+
+            <td>
+
+                <button
+                    class="book"
+                    type="button"
+                  onclick="window.location.href='booking.html';"
+                >
+                    Book
+                </button>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</section>
+
+
+
+<!-- ========================================== -->
+<!-- SERVICES -->
+<!-- ========================================== -->
+
+<section class="services-section">
+
+
+    <div class="section-heading">
+
+        <p class="small-heading">
+            OUR SERVICES
+        </p>
+
+        <h2>
+            Choose a Service
+        </h2>
+
+        <p>
+            Select a service and book your appointment.
+        </p>
+
+    </div>
+
+
+
+    <!-- SERVICES WILL BE INSERTED HERE -->
+
+    <div
+        class="service-list"
+        id="serviceList"
+    >
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ========================================== -->
+<!-- JAVASCRIPT -->
+<!-- ========================================== -->
+
+<script src="./js/detials.js"></script>
+
+
+</body>
+
+</html>
+
